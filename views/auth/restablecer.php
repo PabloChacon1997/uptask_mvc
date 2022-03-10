@@ -4,8 +4,9 @@
 
   <div class="contenedor-sm">
     <p class="descripcion-pagina">Coloca tu nuevo password</p>
-
-    <form method="POST" action="/" class="formulario">
+    <?php include_once __DIR__.'/../templates/alertas.php'; ?>
+    <?php if($mostrar): ?>
+    <form method="POST" class="formulario">
       <div class="campo">
         <label for="password">Nuevo Password</label>
         <input type="password" id="password" name="password" placeholder="Tu password" />
@@ -13,6 +14,7 @@
 
       <input type="submit" value="Guardar password" class="boton" />
     </form>
+    <?php endif; ?>
     <div class="acciones">
       <a href="/crear">¿Aun no tienes cuenta? Crea una</a>
       <a href="/olvide">¿Olvidates tu Password?</a>
